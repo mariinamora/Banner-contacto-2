@@ -1,0 +1,48 @@
+<style>
+.bc-banner{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:24px;box-sizing:border-box;width:100%;padding:56px 64px;border-radius:32px;background:linear-gradient(135deg,#33346a 0%,#363f78 55%,#2e3463 100%);color:#fff;font-family:"Open Sans","Segoe UI",Roboto,Arial,sans-serif}
+.bc-banner *{box-sizing:border-box}
+.bc-banner::before{content:"";position:absolute;top:-30%;right:-8%;width:46%;aspect-ratio:1;border-radius:50%;background:rgba(164,192,224,.18);pointer-events:none}
+.bc-text{position:relative;z-index:1;max-width:620px}
+.bc-text h2{margin:0 0 16px;font-size:clamp(2.2rem,5.5vw,4.2rem);line-height:1.05;font-weight:800;color:#fff;border:0;padding:0}
+.bc-text p{margin:0 0 24px;font-size:clamp(1rem,1.7vw,1.25rem);line-height:1.6;color:#e8ecf6}
+.bc-pill{display:inline-block;margin-bottom:24px;padding:12px 24px;border:2px solid #a4c0e0;border-radius:999px;color:#a4c0e0;font-weight:700;font-size:1.05rem}
+.bc-actions{display:flex;flex-wrap:wrap;gap:14px}
+.bc-btn{display:inline-block;padding:16px 28px;border:2px solid #a4c0e0;border-radius:18px;background:transparent;color:#fff!important;font-weight:700;font-size:1.05rem;text-decoration:none!important;transition:background .2s,transform .2s}
+.bc-btn:hover,.bc-btn:focus-visible{background:rgba(164,192,224,.22);transform:translateY(-2px)}
+.bc-btn--main{background:#a4c0e0;color:#1f1b3d!important}
+.bc-btn--main:hover,.bc-btn--main:focus-visible{background:#bcd2ec}
+.bc-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.bc-phone-wrap{position:relative;z-index:1;flex:0 0 auto;width:min(220px,22vw);margin-right:4%;text-align:center}
+.bc-phone{display:block;width:100%;height:auto;animation:bc-float 3.6s ease-in-out infinite;transform-origin:50% 90%}
+.bc-shadow{width:60%;height:18px;margin:14px auto 0;border-radius:50%;background:rgba(15,12,40,.45);filter:blur(8px);animation:bc-shadow 3.6s ease-in-out infinite}
+@keyframes bc-float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-22px) rotate(3deg)}}
+@keyframes bc-shadow{0%,100%{transform:scaleX(1);opacity:.9}50%{transform:scaleX(.7);opacity:.5}}
+@media (max-width:760px){
+ .bc-banner{flex-direction:column-reverse;align-items:flex-start;padding:36px 24px;border-radius:24px}
+ .bc-phone-wrap{width:120px;margin:0 0 0 auto}
+ .bc-btn{padding:14px 22px}
+}
+@media (prefers-reduced-motion:reduce){.bc-phone,.bc-shadow{animation:none}}
+</style>
+
+<div class="bc-banner">
+ <div class="bc-text">
+  <h2>Contacto</h2>
+  <p>Estamos aquí para atender a las familias del CEIP Nuestra Señora de la Asunción de Arboleas.</p>
+ </div>
+
+ <div class="bc-phone-wrap" aria-hidden="true">
+  <svg class="bc-phone" viewBox="0 0 140 260" xmlns="http://www.w3.org/2000/svg">
+   <rect x="10" y="6" width="120" height="248" rx="22" fill="#a4c0e0"/>
+   <rect x="10" y="6" width="120" height="44" rx="22" fill="#fff"/>
+   <rect x="10" y="30" width="120" height="20" fill="#fff"/>
+   <rect x="52" y="22" width="36" height="8" rx="4" fill="#a4c0e0"/>
+   <rect x="24" y="62" width="92" height="170" rx="14" fill="#1f1b3d"/>
+   <g transform="translate(40 98) scale(2.5)" fill="#fff">
+    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+   </g>
+   <rect x="52" y="214" width="36" height="6" rx="3" fill="#a4c0e0"/>
+  </svg>
+  <div class="bc-shadow"></div>
+ </div>
+</div>
